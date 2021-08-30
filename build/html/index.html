@@ -1,0 +1,450 @@
+<!doctype html>
+<html class="no-js">
+  <head><meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <meta name="color-scheme" content="light dark"><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+<link rel="index" title="Index" href="genindex.html" /><link rel="search" title="Search" href="search.html" /><link rel="next" title="Upgrade issues" href="upgrade-issues.html" />
+
+    <meta name="generator" content="sphinx-4.1.2, furo 2021.08.17.beta43"/>
+        <title>sphinx-pmatulis documentation</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/furo.css?digest=910ac4ccc9d7c023151c34010d7b500fb9777a51" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/furo-extensions.css?digest=16fb25fabf47304eee183a5e9af80b1ba98259b1" />
+    
+    
+
+
+<style>
+  body {
+    --color-code-background: #f8f8f8;
+  --color-code-foreground: black;
+  
+  }
+  body[data-theme="dark"] {
+    --color-code-background: #202020;
+  --color-code-foreground: #d0d0d0;
+  
+  }
+  @media (prefers-color-scheme: dark) {
+    body:not([data-theme="light"]) {
+      --color-code-background: #202020;
+  --color-code-foreground: #d0d0d0;
+  
+    }
+  }
+</style>
+    <link media="(prefers-color-scheme: dark)" rel="stylesheet" href="_static/pygments_dark.css"></head>
+  <body>
+    
+<svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+  <symbol id="svg-toc" viewBox="0 0 24 24">
+    <title>Contents</title>
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+      <path stroke="none" d="M0 0h24v24H0z" />
+      <line x1="4" y1="6" x2="20" y2="6" />
+      <line x1="10" y1="12" x2="20" y2="12" />
+      <line x1="6" y1="18" x2="20" y2="18" />
+    </svg>
+  </symbol>
+  <symbol id="svg-menu" viewBox="0 0 24 24">
+    <title>Menu</title>
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather-menu">
+      <line x1="3" y1="12" x2="21" y2="12"></line>
+      <line x1="3" y1="6" x2="21" y2="6"></line>
+      <line x1="3" y1="18" x2="21" y2="18"></line>
+    </svg>
+  </symbol>
+  <symbol id="svg-arrow-right" viewBox="0 0 24 24">
+    <title>Expand</title>
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather-chevron-right">
+      <polyline points="9 18 15 12 9 6"></polyline>
+    </svg>
+  </symbol>
+  <symbol id="svg-sun" viewBox="0 0 24 24">
+    <title>Light mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="feather-sun">
+      <circle cx="12" cy="12" r="5"></circle>
+      <line x1="12" y1="1" x2="12" y2="3"></line>
+      <line x1="12" y1="21" x2="12" y2="23"></line>
+      <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+      <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+      <line x1="1" y1="12" x2="3" y2="12"></line>
+      <line x1="21" y1="12" x2="23" y2="12"></line>
+      <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+      <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+    </svg>
+  </symbol>
+  <symbol id="svg-moon" viewBox="0 0 24 24">
+    <title>Dark mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-moon">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+      <path d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454z" />
+    </svg>
+  </symbol>
+  <symbol id="svg-sun-half" viewBox="0 0 24 24">
+    <title>Auto light/dark mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-shadow">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+      <circle cx="12" cy="12" r="9" />
+      <path d="M13 12h5" />
+      <path d="M13 15h4" />
+      <path d="M13 18h1" />
+      <path d="M13 9h4" />
+      <path d="M13 6h1" />
+    </svg>
+  </symbol>
+</svg>
+
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation">
+<input type="checkbox" class="sidebar-toggle" name="__toc" id="__toc">
+<label class="overlay sidebar-overlay" for="__navigation">
+  <div class="visually-hidden">Hide navigation sidebar</div>
+</label>
+<label class="overlay toc-overlay" for="__toc">
+  <div class="visually-hidden">Hide table of contents sidebar</div>
+</label>
+
+
+
+<div class="page">
+  <header class="mobile-header">
+    <div class="header-left">
+      <label class="nav-overlay-icon" for="__navigation">
+        <div class="visually-hidden">Toggle site navigation sidebar</div>
+        <i class="icon"><svg><use href="#svg-menu"></use></svg></i>
+      </label>
+    </div>
+    <div class="header-center">
+      <a href="#"><div class="brand">sphinx-pmatulis  documentation</div></a>
+    </div>
+    <div class="header-right">
+      <div class="theme-toggle-container theme-toggle-header">
+        <button class="theme-toggle">
+          <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
+          <svg class="theme-icon-when-auto"><use href="#svg-sun-half"></use></svg>
+          <svg class="theme-icon-when-dark"><use href="#svg-moon"></use></svg>
+          <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
+        </button>
+      </div>
+      <label class="toc-overlay-icon toc-header-icon" for="__toc">
+        <div class="visually-hidden">Toggle table of contents sidebar</div>
+        <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
+      </label>
+    </div>
+  </header>
+  <aside class="sidebar-drawer">
+    <div class="sidebar-container">
+      
+      <div class="sidebar-sticky"><a class="sidebar-brand" href="#">
+  
+  
+  <span class="sidebar-brand-text">sphinx-pmatulis  documentation</span>
+  
+</a><form class="sidebar-search-container" method="get" action="search.html" role="search">
+  <input class="sidebar-search" placeholder=Search name="q" aria-label="Search">
+  <input type="hidden" name="check_keywords" value="yes">
+  <input type="hidden" name="area" value="default">
+</form>
+<div id="searchbox"></div><div class="sidebar-scroll"><div class="sidebar-tree">
+  <ul>
+<li class="toctree-l1"><a class="reference internal" href="upgrade-issues.html">Upgrade issues</a></li>
+</ul>
+
+</div>
+</div>
+      </div>
+      
+    </div>
+  </aside>
+  <div class="main">
+    <div class="content">
+      <article role="main">
+        <div class="content-icon-container">
+          <div class="theme-toggle-container theme-toggle-content">
+            <button class="theme-toggle">
+              <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
+              <svg class="theme-icon-when-auto"><use href="#svg-sun-half"></use></svg>
+              <svg class="theme-icon-when-dark"><use href="#svg-moon"></use></svg>
+              <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
+            </button>
+          </div>
+          <label class="toc-overlay-icon toc-content-icon" for="__toc">
+            <div class="visually-hidden">Toggle table of contents sidebar</div>
+            <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
+          </label>
+        </div>
+        <section id="keystone">
+<h1>Keystone<a class="headerlink" href="#keystone" title="Permalink to this headline">¶</a></h1>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="upgrade-issues.html">Upgrade issues</a></li>
+</ul>
+</div>
+<section id="inter-sphinx-testing">
+<h2>Inter-Sphinx testing<a class="headerlink" href="#inter-sphinx-testing" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p><a class="reference external" href="https://diataxis.fr/how-to-guides/#how-to" title="(in Diátaxis)"><span>About how-to guides</span></a></p></li>
+<li><p><a class="reference external" href="https://docs.python.org/3/library/logging.html#module-logging" title="(in Python v3.9)"><code class="docutils literal notranslate"><span class="pre">logging</span></code></a></p></li>
+<li><p><a class="reference external" href="https://docs.python.org/3/library/threading.html#threading.Thread.start" title="(in Python v3.9)"><code class="xref py py-meth docutils literal notranslate"><span class="pre">the</span> <span class="pre">start()</span> <span class="pre">method</span> <span class="pre">of</span> <span class="pre">the</span> <span class="pre">Thread</span> <span class="pre">class</span> <span class="pre">of</span> <span class="pre">Python's</span> <span class="pre">threading</span> <span class="pre">module</span></code></a></p></li>
+</ul>
+</section>
+<section id="security-compliance">
+<h2>Security compliance<a class="headerlink" href="#security-compliance" title="Permalink to this headline">¶</a></h2>
+<p>The keystone charm’s <code class="docutils literal notranslate"><span class="pre">password-security-compliance</span></code> configuration option sets
+the <code class="docutils literal notranslate"><span class="pre">[security_compliance]</span></code> section of Keystone’s configuration file. The
+value of this option is a YAML dictionary that includes support for the
+following keys (value formats and units are also included).</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>change_password_upon_first_use: &lt;boolean&gt;
+disable_user_account_days_inactive: &lt;int&gt; (days)
+lockout_duration: &lt;int&gt; (seconds)
+lockout_failure_attempts: &lt;int&gt;
+minimum_password_age: &lt;int&gt; (days)
+password_expires_days: &lt;int&gt; (days)
+password_regex: &lt;string&gt;
+password_regex_description: &lt;string&gt;
+unique_last_password_count: &lt;int&gt;
+</pre></div>
+</div>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>The upstream document <a class="reference external" href="https://docs.openstack.org/keystone/latest/admin/configuration.html#security-compliance-and-pci-dss">Security compliance and PCI-DSS</a> should be consulted
+before setting any of these options.</p>
+</div>
+<p>The configuration is typically contained within a file, say <code class="docutils literal notranslate"><span class="pre">config.yaml</span></code>.
+For example:</p>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">password-security-compliance</span><span class="p">:</span>
+   <span class="nt">change_password_upon_first_use</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">True</span>
+   <span class="nt">lockout_duration</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">1800</span>
+   <span class="nt">lockout_failure_attempts</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">3</span>
+   <span class="l l-Scalar l-Scalar-Plain">...</span>
+</pre></div>
+</div>
+<p>It is applied in the usual way:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>juju config keystone --file config.yaml
+</pre></div>
+</div>
+<p>The charm will protect service accounts (accounts requested by other units that
+are in the service domain) against being forced to change their password.
+Operators should also ensure that any other accounts are protected as per the
+above referenced note.</p>
+<p>Operators should also ensure that any non-service accounts are protected as per
+the upstream document.</p>
+<p>The charm will enter a blocked state if the value of charm option
+<code class="docutils literal notranslate"><span class="pre">password-security-compliance</span></code> is not in valid YAML format and/or the
+individual service options do not conform to the proper value formats.</p>
+</section>
+<section id="token-support">
+<span id="keyston-tokens"></span><h2>Token support<a class="headerlink" href="#token-support" title="Permalink to this headline">¶</a></h2>
+<p>Over time OpenStack has come to support two Keystone token formats: UUID and
+Fernet.</p>
+<p>Fernet tokens were added to address the issue of size observed with PKI and
+PKIZ tokens in addition to continuing the Keystone behaviour of persisting
+tokens to a common database cluster (like UUID tokens). For more information
+see this <a class="reference external" href="https://docs.openstack.org/keystone/pike/admin/identity-fernet-token-faq.html">Fernet FAQ</a>.</p>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>Starting with OpenStack Rocky, only the Fernet format for authentication
+tokens is supported. This is documented as a known upgrade issue.</p>
+</div>
+</section>
+<section id="fernet-keys">
+<h2>Fernet keys<a class="headerlink" href="#fernet-keys" title="Permalink to this headline">¶</a></h2>
+<section id="theory-of-operation">
+<h3>Theory of operation<a class="headerlink" href="#theory-of-operation" title="Permalink to this headline">¶</a></h3>
+<p>Keystone generates Fernet keys, which in turn are used to generate/encrypt
+and decode/decrypt Fernet tokens.</p>
+<p>There are three key types, and each is associated with a naming scheme that is
+applied to the directories in which they are found. Directory names are based
+on integers:</p>
+<ul class="simple">
+<li><dl class="simple">
+<dt>primary key</dt><dd><ul>
+<li><p>integer: the highest one</p></li>
+<li><p>generates tokens</p></li>
+<li><p>number of keys: one</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>staged key</dt><dd><ul>
+<li><p>integer: ‘0’</p></li>
+<li><p>will become the next primary key</p></li>
+<li><p>can decode tokens</p></li>
+<li><p>number of keys: one</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>secondary key</dt><dd><ul>
+<li><p>integer: any other number</p></li>
+<li><p>was previously a primary key</p></li>
+<li><p>can decode tokens</p></li>
+<li><p>number of keys: one or more</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+<p>Each key type must be present at all times. This means Keystone uses a minimum
+of three keys.</p>
+</section>
+<section id="key-rotation">
+<h3>Key rotation<a class="headerlink" href="#key-rotation" title="Permalink to this headline">¶</a></h3>
+<p>Key rotation refers to the process by which two keys assume a different type,
+one key gets created, and typically one key gets removed:</p>
+<ol class="arabic simple">
+<li><p>staged evolves to primary</p></li>
+<li><p>primary evolves to secondary</p></li>
+<li><p>the staged is created</p></li>
+<li><p>a secondary is removed</p></li>
+</ol>
+<p>A key will get removed if the total number of keys surpasses the specified
+maximum allowed (more on this later).</p>
+<p>This process takes place on the master keystone unit and takes into account
+three aspects:</p>
+<ul class="simple">
+<li><p>rotation frequency</p></li>
+<li><p>token expiration</p></li>
+<li><p>maximum number of active keys</p></li>
+</ul>
+<p>These are related according to this formula:</p>
+<div class="math-wrapper"><div class="math notranslate nohighlight">
+\[max\_active\_keys = \frac{ token\_expiration }{ rotation\_frequency } + 2\]</div></div>
+<p>In the keystone charm, token expiration and the maximum number of active keys
+are specified, respectively, with the <code class="docutils literal notranslate"><span class="pre">token-expiration</span></code> and the
+<code class="docutils literal notranslate"><span class="pre">fernet-max-active-keys</span></code> configuration options.</p>
+<p>For example, given that an administrator desires a token expiration of 1 hour
+(3600 seconds) and a rotation frequency of 15 minutes (900 seconds), the maximum
+number of active keys must be six:</p>
+<div class="math-wrapper"><div class="math notranslate nohighlight">
+\[\begin{split}\begin{eqnarray}
+max\_active\_keys &amp;=&amp; \frac{ 3600 }{ 900 } + 2\\
+&amp;=&amp; 4+2\\
+&amp;=&amp; 6\\
+\end{eqnarray}\end{split}\]</div></div>
+<p>The above two options can then be set accordingly:</p>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">token-expiration</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">3600</span>
+<span class="nt">fernet-max-active-keys</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">6</span>
+</pre></div>
+</div>
+<section id="rotation-frequency">
+<h4>Rotation frequency<a class="headerlink" href="#rotation-frequency" title="Permalink to this headline">¶</a></h4>
+<p>From the point of view of rotation frequency:</p>
+<div class="math-wrapper"><div class="math notranslate nohighlight">
+\[rotation\_frequency = \frac{ token\_expiration }{ max\_active\_keys - 2 }\]</div></div>
+<p>Since the denominator must lead to a positive real number for rotation
+frequency the value of <code class="docutils literal notranslate"><span class="pre">fernet-max-active-keys</span></code> must be at least three, and
+this constraint is enforced by the charm.</p>
+<p>To increase rotation frequency either decrease <code class="docutils literal notranslate"><span class="pre">fernet-max-active-keys</span></code> or
+increase <code class="docutils literal notranslate"><span class="pre">token-expiration</span></code>. To decrease rotation frequency, do the opposite.</p>
+<p>The most notable effect of increasing rotation frequency is the reduction in
+key lifetime (secondary keys get removed more often).</p>
+</section>
+<section id="default-values">
+<h4>Default values<a class="headerlink" href="#default-values" title="Permalink to this headline">¶</a></h4>
+<p>These are the default values for these keystone charm options and the resulting
+default rotation frequency:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">token-expiration</span></code>: 3600 sec (1 hour)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">fernet-max-active-keys</span></code>: 3</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">rotation</span> <span class="pre">frequency</span></code>: 3600 sec (1 hour)</p></li>
+</ul>
+</section>
+</section>
+<section id="token-validation-breakage">
+<h3>Token validation breakage<a class="headerlink" href="#token-validation-breakage" title="Permalink to this headline">¶</a></h3>
+<p>Token validation breakage is a situation in which a decoding key is no longer
+available to validate an unexpired token. This can be caused by a rotation
+frequency that has been set too high (a very short key lifetime) or by keys
+failing to synchronise (from the master keystone unit to the other units) prior
+to the succeeding rotation. Incremental changes to rotation frequency is
+therefore advised.</p>
+</section>
+</section>
+</section>
+
+      </article>
+      <footer>
+        
+        <div class="related-pages">
+          <a class="next-page" href="upgrade-issues.html">
+              <div class="page-info">
+                <div class="context">
+                  <span>Next</span>
+                </div>
+                <div class="title">Upgrade issues</div>
+              </div>
+              <svg><use href="#svg-arrow-right"></use></svg>
+            </a>
+          
+        </div>
+
+        <div class="related-information">
+              Copyright &#169; 2021, Peter Matulis
+            |
+            Built with <a href="https://www.sphinx-doc.org/">Sphinx</a>
+              and
+              <a class="muted-link" href="https://pradyunsg.me">@pradyunsg</a>'s
+              <a href="https://github.com/pradyunsg/furo">Furo theme</a>.
+            |
+            <a class="muted-link" href="_sources/index.rst.txt"
+               rel="nofollow">
+              Show Source
+            </a>
+        </div>
+        
+      </footer>
+    </div>
+    <aside class="toc-drawer">
+      
+      
+      <div class="toc-sticky toc-scroll">
+        <div class="toc-title-container">
+          <span class="toc-title">
+            Contents
+          </span>
+        </div>
+        <div class="toc-tree-container">
+          <div class="toc-tree">
+            <ul>
+<li><a class="reference internal" href="#">Keystone</a><ul>
+<li><a class="reference internal" href="#inter-sphinx-testing">Inter-Sphinx testing</a></li>
+<li><a class="reference internal" href="#security-compliance">Security compliance</a></li>
+<li><a class="reference internal" href="#token-support">Token support</a></li>
+<li><a class="reference internal" href="#fernet-keys">Fernet keys</a><ul>
+<li><a class="reference internal" href="#theory-of-operation">Theory of operation</a></li>
+<li><a class="reference internal" href="#key-rotation">Key rotation</a><ul>
+<li><a class="reference internal" href="#rotation-frequency">Rotation frequency</a></li>
+<li><a class="reference internal" href="#default-values">Default values</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#token-validation-breakage">Token validation breakage</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+          </div>
+        </div>
+      </div>
+      
+      
+    </aside>
+  </div>
+</div><script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/scripts/main.js"></script>
+    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    </body>
+</html>

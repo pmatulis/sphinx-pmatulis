@@ -1,0 +1,14 @@
+# Build directories
+*/build/*
+
+# generated during doc builds
+AUTHORS
+ChangeLog
+
+# Packages
+*.egg-info/*
+
+# Editors
+*~
+.*.swp
+.bak
